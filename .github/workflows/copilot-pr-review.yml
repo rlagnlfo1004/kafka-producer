@@ -1,0 +1,14 @@
+name: Copilot Pull Request Review
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  copilot_review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/actions/copilot-pr-review@v1
+        with:
+          github-token: ${{ secrets.COPILOT_REVIEW }}
