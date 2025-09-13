@@ -1,3 +1,2 @@
 confluent-kafka==2.11.1
 PyYAML==6.0.2
-requests
