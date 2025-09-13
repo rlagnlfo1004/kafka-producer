@@ -46,6 +46,7 @@ class RealtimeBicycle:
                     self.log.error(f'요청 실패, 에러코드: {result_code}, 메시지:{result_msg}')
                     time.sleep(30)      # 30초 대기
 
+            # 정상인 경우 처리
             key_nm = list(contents.keys())[0]
             items = contents.get(key_nm)
             item_cnt = items.get('list_total_count')
@@ -69,8 +70,8 @@ class RealtimeBicycle:
             url = f'{base_url}/{start}/{end}/{base_dt}'
         else:
             url = f'{base_url}/{start}/{end}'
-        rslt = requests.get(url, headers)
-        return rslt
+        result = requests.get(url, headers)
+        return result
 
     def chk_dir(self):
         os.makedirs(self.log_dir, exist_ok=True)
