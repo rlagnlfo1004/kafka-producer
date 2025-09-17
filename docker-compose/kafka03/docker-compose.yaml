@@ -17,7 +17,7 @@ services:
     user: 1001:1000
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.retention.time=168h'
+      - '--storage.tsdb.retention.time=168h'  # 7일 뒤 자동 데이터 삭제
     volumes:
       - /src/kafka-producer/docker-compose/kafka03/prometheus.yml:/etc/prometheus/prometheus.yml
       - /data/prometheus/data:/prometheus
