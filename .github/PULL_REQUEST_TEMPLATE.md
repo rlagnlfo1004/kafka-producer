@@ -1,5 +1,3 @@
-[Infra] 한 일 #[github issure number]
-
 ## 🔗 관련 이슈
 
 > ex) #이슈번호, #이슈번호
